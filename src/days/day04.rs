@@ -34,7 +34,7 @@ fn read_file() -> String {
 }
 
 fn parse_assignments(data: String) -> Vec<Assignment> {
-    let re = Regex::new(r"(^\d*)-(\d*),(\d*)-(\d*)$").unwrap();
+    let re = Regex::new(r"^(\d*)-(\d*),(\d*)-(\d*)$").unwrap();
     return data
         .lines()
         .map(|l| {
